@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="row">
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/02.gif" alt="">
+            <img class="answer" src="wrong.png" alt="">
+        </div>
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/03.gif" alt="">
+            <img class="answer" src="correct.png" alt="">
+        </div>
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/04.gif" alt="">
+            <img class="answer" src="correct.png" alt="">
+        </div>
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/05.gif" alt="">
+            <img class="answer" src="wrong.png" alt="">
+        </div>      
+    </div>
+
+    <div class="row">
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/06.gif" alt="">
+            <img class="answer" src="correct.png" alt="">
+        </div>
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/07-1.gif" alt="">
+            <img class="answer" src="correct.png" alt="">
+        </div>
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/08.gif" alt="">
+            <img class="answer" src="wrong.png" alt="">
+        </div>
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/12.gif" alt="">
+            <img class="answer" src="wrong.png" alt="">
+        </div>      
+    </div>
+
+    <div class="row">
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/13.gif" alt="">
+            <img class="answer" src="correct.png" alt="">
+        </div>
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/14.gif" alt="">
+            <img class="answer" src="correct.png" alt="">
+        </div>
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/15.gif" alt="">
+            <img class="answer" src="correct.png" alt="">
+        </div>
+        <div class="card" onclick="answer(this)">
+            <img class="scene" src="../gif/16.gif" alt="">
+            <img class="answer" src="wrong.png" alt="">
+        </div>      
+    </div>
+
+
+    <img class="restart" src="restart.png" alt="" onclick="restart()">
+
+    <script>
+
+
+        function restart(){
+            var element = document.getElementsByClassName("answer");
+
+            for(var x=0;x<element.length;x++){
+                element[x].style.opacity=0;
+            }
+        }
+
+        function answer(object){
+            object.getElementsByClassName("answer")[0].style.opacity=1;
+        }
+    </script>
+ 
+  
+    
+
+</body>
+</html>
